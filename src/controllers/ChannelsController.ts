@@ -57,7 +57,7 @@ class ChannelsController {
                 const number = channel.number;
 
                 m3u8 +=
-                    `#EXTINF:0 channel-id="${slug}" tvg-chno="${number}" tvg-logo="${logo}" group-title="${group}", ${name}` +
+                    `#EXTINF:-1 channel-id="${slug}" tvg-chno="${number}" tvg-logo="${logo}" group-title="${group}", ${name}` +
                     "\n";
                 m3u8 += channelUrl + "\n\n";
 
@@ -67,7 +67,7 @@ class ChannelsController {
             }
         });
 
-        response.type("text/plain");
+        response.type("application/x-mpegurl");
         return response.send(m3u8);
     }
 
