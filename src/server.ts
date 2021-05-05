@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import { router } from './routes';
 
-const app_port = 3000;
+const app_port = process.env.PORT || 3000;
 
 const app = express();
 

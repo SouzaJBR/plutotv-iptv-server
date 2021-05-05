@@ -1,6 +1,6 @@
 # Pluto.tv IPTV Server
 
-Pluto.tv based IPTV HTTP service. Based on [@evoactivity's code](https://github.com/evoactivity/PlutoIPTV).
+Pluto.tv based IPTV HTTP service. Based on [@evoactivity's code](https://github.com/evoactivity/PlutoIPTV), but rewrited with Typescript + Express.
 
 Primarly, to be used with external players, such as VLC or Kodi's Simple IPTV PVR, serving a local home network.
 
