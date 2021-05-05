@@ -6,10 +6,11 @@ class PlutoTvClient {
   async getData() : Promise<any[]> {
     // check for cache
 
-    const cacheStatData = await fs.stat("cache.json");
+    const cacheFileExists = await fs.stat("cache.json").then(a => true).catch(e => false);
 
     // if the cache exists, use it
-    if (cacheStatData) {
+    if (cacheFileExists) {
+      const cacheStatData = await fs.stat("cache.json");
       let now = new Date().getTime() / 1000;
       let mtime = new Date(cacheStatData.mtime).getTime() / 1000;
 
